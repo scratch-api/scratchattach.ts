@@ -1,6 +1,8 @@
 # scratchattach
 
-This is an unofficial async typescript clone of [scratchattach](https://github.com/TimMcCool/scratchattach). It is WIP!!
+The official python version is available [here.](https://github.com/TimMcCool/scratchattach)
+
+This typescript clone is far from feature complete.
 
 scratchattach is a Scratch API wrapper with support for almost all site features
 
