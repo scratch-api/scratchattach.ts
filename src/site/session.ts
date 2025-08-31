@@ -188,11 +188,10 @@ export async function login(username: string, password: string,
 
     const sc = resp.headers['set-cookie'];
 
-    if (sc === undefined) {
-        throw new Error('Did not receive set-cookie');
-    }
+    expect(sc).toBeDefined();
 
-    const sid = new RegExp('"(.*)"').exec(sc.toString());
+    const sid = new RegExp('"(.*)"').exec(sc!.toString());
+
     if (sid === null) {
         throw new Error('Did not receive SessID. Maybe a wrong username or password? Or possibly too ' +
             'many incorrect login attempts means you need to login manually online?');
