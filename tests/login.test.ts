@@ -2,8 +2,7 @@ import * as sa from '../src';
 
 test('Login by username and password', async () => {
     const username = process.env["SA_TEST_USERNAME"];
-    const password = process.env["SA_TEST_PASSWORD"];
-    // const sessId = process.env["SA_TEST_SESSID"];
+        const password = process.env["SA_TEST_PASSWORD"];
 
     expect(username).toBeDefined();
     expect(password).toBeDefined();

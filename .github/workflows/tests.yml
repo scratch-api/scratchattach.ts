@@ -23,5 +23,9 @@ jobs:
           npm install
 
       - name: Test with jest
+        env:
+          SA_TEST_USERNAME: ${{ secrets.SA_TEST_USERNAME }}
+          SA_TEST_PASSWORD: ${{ secrets.SA_TEST_PASSWORD }}
+
         run: |
           npm run test
