@@ -9,4 +9,5 @@ test('Login by username and password', async () => {
 
     const sess = await sa.login(username!, password!);
     expect(sess.id).toBeTruthy();
+    console.log(`Logged in as ${sess.username}`);
 });
