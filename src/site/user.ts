@@ -4,15 +4,15 @@ import * as session from './session';
 import * as urls from '../utils/urls'
 
 export class User extends base.BaseSiteComponent {
-    id?: number;
-    name?: string;
+    id: number | undefined;
+    name: string | undefined;
 
     constructor(params: {
         name?: string;
         id?: number;
         session?: session.Session
     }) {
-        super({session: params.session});
+        super(params.session);
 
         this.id = params.id;
         this.name = params.name;

@@ -38,7 +38,7 @@ export class Session extends base.BaseSiteComponent{
             params.password = '';
         }
 
-        super({});
+        super();
         this.session = this;
 
         this.id = params.id;
@@ -115,9 +115,11 @@ export class Session extends base.BaseSiteComponent{
 export function decode_session_id(session_id: string): [Record<string, string>, Date] {
     const [p1, p2] = session_id.split(':');
 
+    expect(p2).toBeDefined();
+
     return [
         JSON.parse(zlib.inflateSync(Buffer.from(p1 + '==', 'base64url')).toString()),
-        new Date(commons.b62_decode(p2) * 1000)
+        new Date(commons.b62_decode(p2!) * 1000)
     ];
 }
 

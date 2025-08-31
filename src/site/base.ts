@@ -3,7 +3,7 @@ import * as urls from '../utils/urls'
 
 export class BaseSiteComponent {
     protected session?: session.Session;
-    constructor(params: session.Session | undefined | {
+    constructor(params?: session.Session | {
         session?: session.Session
     }) {
         if (params instanceof session.Session || params === undefined) {

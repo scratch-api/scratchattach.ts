@@ -23,7 +23,7 @@ export class PartialProject extends base.BaseSiteComponent {
             params.id = 0;
         }
 
-        super({session: params.session});
+        super(params.session);
 
         this.id = params.id;
         this.title = params.title;
