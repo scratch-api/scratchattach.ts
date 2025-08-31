@@ -188,7 +188,7 @@ export async function login(username: string, password: string,
         });
 
     if (resp.status !== 200) {
-        throw new Error(`Login responded with status ${resp.status} with content ${resp.data}`);
+        throw new Error(`Login responded with status ${resp.status} with content ${JSON.stringify(resp.data)}`);
     }
     const sc = resp.headers['set-cookie'];
 
