@@ -18,5 +18,6 @@ I do not _know_ typescript, but i can _code_ it. But that does not mean my code 
 - timouts are in **milliseconds**, not seconds
 - async using promises
 - currently no warning message when logging in
+- uses the `master` branch instead of `main`
 
 Should these be changed? Make an issue on github if you think so.
