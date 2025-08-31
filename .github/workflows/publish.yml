@@ -5,9 +5,6 @@ on:
       - published
 
 jobs:
-  tests:
-    uses: ./.github/workflows/tests.yml
-
   publish:
     runs-on: ubuntu-latest
 

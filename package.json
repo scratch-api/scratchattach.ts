@@ -12,7 +12,7 @@
     "axios": "^1.11.0"
   },
   "name": "scratchattach.ts",
-  "version": "1.0.9",
+  "version": "1.0.10",
   "description": "Typescript package for accessing https://scratch.mit.edu/",
   "author": "faretek1",
   "license": "MIT",
