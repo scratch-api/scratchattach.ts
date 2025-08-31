@@ -184,8 +184,12 @@ export async function login(username: string, password: string,
         }, {
             headers: _headers,
             timeout: params.timeout,
+            validateStatus: ((_) => true)
         });
 
+    if (resp.status !== 200) {
+        throw new Error(`Login responded with status ${resp.status} with content ${resp.data}`);
+    }
     const sc = resp.headers['set-cookie'];
 
     expect(sc).toBeDefined();
