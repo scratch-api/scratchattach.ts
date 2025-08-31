@@ -5,14 +5,26 @@ on:
       - published
 
 jobs:
+  tests:
+    uses: ./.github/workflows/tests.yml
+
   publish:
     runs-on: ubuntu-latest
 
     steps:
       - uses: actions/checkout@v4
-      - uses: ./.github/workflows/tests.yml
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Install dependencies
+        run: |
+          npm install
+
       - name: build
         run: npm run build
+
       - name: publish
         env:
           NPM_TOKEN: ${{ secrets.WORKFLOW_AUTO_PUBLISH }}
