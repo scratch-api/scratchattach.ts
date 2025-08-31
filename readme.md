@@ -2,6 +2,9 @@
 
 The official python version is available [here.](https://github.com/TimMcCool/scratchattach)
 
+npm: https://www.npmjs.com/package/scratchattach.ts
+source: https://github.com/scratch-api/scratchattach.ts/
+
 This typescript clone is far from feature complete.
 
 scratchattach is a Scratch API wrapper with support for almost all site features
